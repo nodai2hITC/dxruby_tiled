@@ -49,7 +49,7 @@
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/dxruby_tiled.
+Bug reports and pull requests are welcome on GitHub at https://github.com/nodai2hITC/dxruby_tiled.
 
 
 ## ライセンス
