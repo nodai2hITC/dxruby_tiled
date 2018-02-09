@@ -12,11 +12,11 @@ DXRuby::Tiled is a ruby library that draw [Tiled Map Editor](http://www.mapedito
 
     require "dxruby_tiled"
     
-    x, y = 0, 0
-    map = DXRuby::Tiled.load_json("tiledmapeditorfile.json")
+    pos_x, pos_y = 0, 0
+    map = DXRuby::Tiled.load("tiledmapeditorfile.tmx")
     
     Window.loop do
-    map.draw(x, y)
+      map.draw(pos_x, pos_y)
     end
 
 For more information, examples/dxruby_tiled_test.rb
@@ -24,8 +24,9 @@ For more information, examples/dxruby_tiled_test.rb
 
 ## Custom properties
 
-- map - x_loop, y_loop(bool)
-- imagelayer - fixed(bool)
+- map - loop(bool)
+- layer - fixed(bool)
+- imagelayer - x_loop, y_loop(bool)
 
 ## Support status
 
@@ -33,17 +34,9 @@ For more information, examples/dxruby_tiled_test.rb
 
 - tile layer (orthogonal, isometric, staggered, hexagonal)
 - image layer
-- animation
-
-### Will support
-
 - object layer
 - collision
-
-### Unsupported
-
-- load .tmx file
-
+- animation
 
 ## Contributing
 
