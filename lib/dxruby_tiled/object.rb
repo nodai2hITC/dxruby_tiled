@@ -1,7 +1,7 @@
 module DXRuby
   module Tiled
     class TMEObject < DXRuby::Sprite
-      attr_reader :object_id, :properties
+      attr_reader :id, :properties
       attr_accessor :name, :type
       
       def self.create_from_hash(hash, map = nil)
@@ -40,7 +40,7 @@ module DXRuby
         super x, y, nil
         @name        = options[:name]
         @type        = options[:type]
-        @object_id   = options[:id]
+        @id          = options[:id]
         @width       = options[:width]
         @height      = options[:height]
         @properties  = options[:properties]
@@ -174,7 +174,7 @@ module DXRuby
       attr_accessor :start_time
       
       def self.evolve(object)
-        new_object = self.new(x: object.x, y: object.y, tile: object.tile, id: @object_id)
+        new_object = self.new(object.x, object.y, object.tile, id: @id)
         %w[z angle scale_x scale_y center_x center_y 
            alpha blend shader image target
            collision collision_enable collision_sync visible offset_sync
